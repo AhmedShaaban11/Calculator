@@ -59,7 +59,12 @@ body > * {
 .calculation-screen {
     border-top: 0;
     border-bottom: 3px solid var(--border-color);
-    justify-content: flex-end;
+    font-size: inherit;
+    text-align: right;
+}
+
+.calculation-screen:focus {
+    outline: none;
 }
 
 .btn {
@@ -73,6 +78,10 @@ body > * {
     align-items: center;
     opacity: 0.8;
     border: 1px solid var(--border-color);
+}
+
+.number {
+    opacity: 0.6;
 }
 
 .btn:hover {
