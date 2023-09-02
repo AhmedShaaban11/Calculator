@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <h1 class="title">Visible Calculator</h1>
+    <div class="calculator">
+        <!-- Screen -->
+        <span class="screen error-screen" id="error-screen"></span>
+        <input type="text" class="screen calculation-screen" id="calculation-screen" value="" readonly></span>
+        <!-- First Row -->
+        <span class="btn command" id="clear-all">AC</span>
+        <span class="btn command" id="clear-last">DEL</span>
+        <span class="btn operator" data-value="^">^</span>
+        <span class="btn operator" data-value="+">+</span>
+        <!-- Second Row -->
+        <span class="btn number" data-value="7">7</span>
+        <span class="btn number" data-value="8">8</span>
+        <span class="btn number" data-value="9">9</span>
+        <span class="btn operator" data-value="-">-</span>
+        <!-- Third Row -->
+        <span class="btn number" data-value="4">4</span>
+        <span class="btn number" data-value="5">5</span>
+        <span class="btn number" data-value="6">6</span>
+        <span class="btn operator" data-value="*">*</span>
+        <!-- Fourth Row -->
+        <span class="btn number" data-value="1">1</span>
+        <span class="btn number" data-value="2">2</span>
+        <span class="btn number" data-value="3">3</span>
+        <span class="btn operator" data-value="/">/</span>
+        <!-- Fifth Row -->
+        <span class="btn number" data-value=".">.</span>
+        <span class="btn number" data-value="0">0</span>
+        <span class="btn number" data-value="e">e</span>
+        <span class="btn command" id="calculate">=</span>
+    </div>
+</body>
+</html>
