@@ -50,21 +50,21 @@ const infixToPostfix = (infix) => {
         if (val === "^") {
             if (precedence(val) >= precedence(stack[stack.length - 1])) {
                 stack.push(val);
-            } else {
-                while (precedence(val) < precedence(stack[stack.length - 1])) {
-                    postfix.push(stack.pop());
-                }
-                stack.push(val);
+                continue;
             }
+            while (precedence(val) < precedence(stack[stack.length - 1])) {
+                postfix.push(stack.pop());
+            }
+            stack.push(val);
         } else {
             if (precedence(val) > precedence(stack[stack.length - 1])) {
                 stack.push(val);
-            } else {
-                while (precedence(val) <= precedence(stack[stack.length - 1])) {
-                    postfix.push(stack.pop());
-                }
-                stack.push(val);
+                continue;
             }
+            while (precedence(val) <= precedence(stack[stack.length - 1])) {
+                postfix.push(stack.pop());
+            }
+            stack.push(val);
         }
     }
     while (stack.length !== 0) {
